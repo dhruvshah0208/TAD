@@ -20,10 +20,4 @@ theta_AD = atan2(yA - yD,xA - xD);
 R_AD = sqrt((xA - xD)^2 + (yA - yD)^2);
 theta_AD_dot = 1/R_AD*(vA*sin(alpha_A - theta_AD) - vD*sin(alpha_D - theta_AD));
 N = 4;
-uD = N*theta_AD_dot*vD/aD;
-
-if uD > 0
-    y = min(uD,1);
-else
-    y = max(uD,-1);
-end
+y = N*theta_AD_dot*vD/aD;

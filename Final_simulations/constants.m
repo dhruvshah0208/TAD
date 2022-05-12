@@ -13,17 +13,17 @@ rT = vT^2/aT;
 
 %% Initial Conditions (requires user input)
 
-xD0 = 0;
-yD0 = 0;
+xA0 = 0;
+yA0 = 0;
 
-xA0 = 10;
-yA0 = 10;
+xD0 = 10;
+yD0 = 10;
 
 xT0 = -5;
 yT0 = 20;
 
-alpha_D0 = pi/6; 
-alpha_A0 = pi;
+alpha_A0 = pi/6; 
+alpha_D0 = pi;
 alpha_T0 = 7*pi/6;
 
 T = 1; % Time of look ahead in barrier function computation

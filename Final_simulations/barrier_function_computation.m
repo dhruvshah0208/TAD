@@ -36,14 +36,14 @@ f(9) = y_T_dot;
 
 g = [0 0 0 1 0 0 0 0 0];
 
-h  = compute_barrier1(x);
-
-lie_f_h = 1/epsilon * (compute_barrier1(x + epsilon*f') - h);
-lie_g_h = 1/epsilon * (compute_barrier1(x + epsilon*g') - h);
-
-% h  = compute_barrier2(x);
+% h  = compute_barrier1(x);
 % 
-% lie_f_h = 1/epsilon * (compute_barrier2(x + epsilon*f') - h);
-% lie_g_h = 1/epsilon * (compute_barrier2(x + epsilon*g') - h);
+% lie_f_h = 1/epsilon * (compute_barrier1(x + epsilon*f') - h);
+% lie_g_h = 1/epsilon * (compute_barrier1(x + epsilon*g') - h);
+
+h  = compute_barrier2(x);
+
+lie_f_h = 1/epsilon * (compute_barrier2(x + epsilon*f') - h);
+lie_g_h = 1/epsilon * (compute_barrier2(x + epsilon*g') - h);
 
 y(1) = h; y(2) = lie_f_h; y(3) = lie_g_h;
